@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DestinationDataService from "../services/destination";
 import { Link } from "react-router-dom";
+import "./add-review.css"
 
 const AddReview = props => {
   let initialReviewState = ""
@@ -75,7 +76,7 @@ const AddReview = props => {
                 name="text"
               />
             </div>
-            <button onClick={saveReview} className="btn btn-success">
+            <button onClick={saveReview} className="btn btn-success sbr">
               Submit
             </button>
           </div>

@@ -48,7 +48,7 @@ const Login = props => {
           />
         </div>
 
-        <button onClick={login} className="btn btn-success">
+        <button onClick={login} className="btn btn-success sbr">
           Login
         </button>
       </div>
