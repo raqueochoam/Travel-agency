@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import DestinationDataService from "../services/destination.js";
 import {Link} from "react-router-dom";
+import "./destination-list.css";
 
 
 const DestinationsList = props => {
@@ -91,14 +92,14 @@ const DestinationsList = props => {
           <div className="input-group col-lg-4">
             <input
               type="text"
-              className="form-control"
+              className="form-control ifs"
               placeholder="Search by name"
               value={searchName}
               onChange={onChangeSearchName}
             />
             <div className="input-group-append">
               <button
-                className="btn btn-outline-secondary"
+                className="btn btn-outline-secondary sb"
                 type="button"
                 onClick={findByName}
               >
@@ -109,14 +110,14 @@ const DestinationsList = props => {
           <div className="input-group col-lg-4">
             <input
               type="text"
-              className="form-control"
+              className="form-control ifs"
               placeholder="Search by zone"
               value={searchZone}
               onChange={onChangeSearchZone}
             />
             <div className="input-group-append">
               <button
-                className="btn btn-outline-secondary"
+                className="btn btn-outline-secondary sb"
                 type="button"
                 onClick={findByZone}
               >
@@ -126,7 +127,7 @@ const DestinationsList = props => {
           </div>
           <div className="input-group col-lg-4">
   
-            <select onChange={onChangeSearchState}>
+            <select onChange={onChangeSearchState} className="form-control ifs">
                {states.map(state => {
                  return (
                    <option value={state}> {state.substr(0, 20)} </option>
@@ -135,7 +136,7 @@ const DestinationsList = props => {
             </select>
             <div className="input-group-append">
               <button
-                className="btn btn-outline-secondary"
+                className="btn btn-outline-secondary sb"
                 type="button"
                 onClick={findByState}
               >
@@ -152,16 +153,20 @@ const DestinationsList = props => {
               <div className="col-lg-4 pb-1">
                 <div className="card">
                   <div className="card-body">
-                    <h5 className="card-title">{destination.name}</h5>
+                  <img src={destination.photo_url} className="img"></img>
+                    <h5 className="card-title fc"><strong>{destination.name}</strong></h5>
                     <p className="card-text">
+                        <br></br>
                       <strong>State: </strong>{destination.state}<br/>
-                      <strong>Other Info: </strong>{city}
+                      <strong>Zone: </strong>{destination.zone}<br/>
+                      <strong>Currency: </strong>{destination.currency}<br/>
+                      <strong>Language: </strong>{destination.language}<br/>
                     </p>
                     <div className="row">
-                    <Link to={"/destinations/"+destination._id} className="btn btn-primary col-lg-5 mx-1 mb-1">
+                    <Link to={"/destinations/"+destination._id} className="btn btn-primary col-lg-5 mx-1 mb-1 cb">
                       View Opinions
                     </Link>
-                    <a target="_blank" href={"https://www.google.com/maps/place/" + city} className="btn btn-primary col-lg-5 mx-1 mb-1">Book Flight</a>
+                    <a target="_blank" className="btn btn-primary col-lg-5 mx-1 mb-1 cb">Book Flight</a>
                     </div>
                   </div>
                 </div>
