@@ -1,0 +1,56 @@
+.title{
+    text-align: center;
+    color: #33cabb;
+    font-weight: bold;
+}
+
+.hc{
+    background-color: #33cabb;
+    position: relative;
+    bottom: -30px;
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+}
+
+.homeimg{
+    width: 80%;
+    position: relative;
+    right: -20%;
+    top: -20%;
+}
+
+.colh {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Clear floats after the columns */
+.rowh:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.t2{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.hs{
+    background-color: white;
+    color: #33cabb;
+    border: 0px;
+    position: relative;
+    left: 32%;
+    top: 30%;
+    width: 200px;
+
+}
+
+.hs:hover{
+    background-color: white;
+    color: #33cabb;
+}

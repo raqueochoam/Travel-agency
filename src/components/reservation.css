@@ -1,0 +1,61 @@
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-inner{
+    position: relative;
+    padding: 32px;
+    width: 100%;
+    max-width: 640px;
+    background-color: #FFF;
+}
+
+.popup-inner .close-btn{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.depart{
+    background-color: lightgray;
+    border-radius: 10px;
+    width: 400px;
+    padding: 10px;
+}
+
+.datep{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #33cabb;
+    border-radius: 10px;
+}
+
+.rd2{
+    position: relative;
+    bottom: -10px;
+}
+.rd3{
+    position: relative;
+    bottom: -20px;
+}
+
+.tli{
+    font-size: 30px;
+    color:#33cabb ;
+    font-weight: bold;
+}
+
+.crb{
+    border: 1px solid #33cabb;
+    border-radius: 10px;
+    background-color: #aefaf2;
+}

@@ -11,6 +11,7 @@ const DestinationsList = props => {
     const [searchState, setSearchState ] = useState("");
     const [states, setStates] = useState(["All States"]);
 
+
     useEffect(() => {
         retrieveDestinations();
         retrieveStates();
@@ -148,12 +149,11 @@ const DestinationsList = props => {
         </div>
         <div className="row">
           {destinations.map((destination) => {
-            const city = `${destination.language}, ${destination.currency}, ${destination.zone}`;
             return (
               <div className="col-lg-4 pb-1">
                 <div className="card">
                   <div className="card-body">
-                  <img src={destination.photo_url} className="img"></img>
+                  <img alt="" src={destination.photo_url} className="img"></img>
                     <h5 className="card-title fc"><strong>{destination.name}</strong></h5>
                     <p className="card-text">
                         <br></br>
@@ -166,7 +166,9 @@ const DestinationsList = props => {
                     <Link to={"/destinations/"+destination._id} className="btn btn-primary col-lg-5 mx-1 mb-1 cb">
                       View Opinions
                     </Link>
-                    <a target="_blank" className="btn btn-primary col-lg-5 mx-1 mb-1 cb">Book Flight</a>
+                    <Link to={"/reservations/"+destination._id} className="btn btn-primary col-lg-5 mx-1 mb-1 cb">
+                      Make Reservation
+                    </Link>
                     </div>
                   </div>
                 </div>

@@ -15,7 +15,6 @@
 
 .cb{
     background-color: #33cabb;
-    color: gray;
     border: 0px;
     position: relative;
     right: -20px;
@@ -23,7 +22,6 @@
 
 .cb:hover{
     background-color: #31bfb1;
-    color: gray;
     border: 0px;
 }
 

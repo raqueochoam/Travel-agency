@@ -47,11 +47,11 @@ const Destination = props => {
     <div>
       {destination ? (
         <div>
-            <div class="row r1">
-                <div class="column">
+            <div className="row r1">
+                <div className="column">
                   <img src={destination.photo_url} className="img" />
                 </div>
-                <div class="column">
+                <div className="column">
                     <h5 className="fc"><strong>{destination.name}</strong></h5>
                     <p>
                       <br></br>

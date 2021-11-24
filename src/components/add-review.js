@@ -58,7 +58,7 @@ const AddReview = props => {
         {submitted ? (
           <div>
             <h4>You submitted successfully!</h4>
-            <Link to={"/destinations/" + props.match.params.id} className="btn btn-success">
+            <Link to={"/destinations/" + props.match.params.id} className="btn btn-success sbr">
               Back to Destination
             </Link>
           </div>
@@ -84,7 +84,7 @@ const AddReview = props => {
       </div>
 
       ) : (
-      <div>
+      <div className="tli">
         Please log in.
       </div>
       )}

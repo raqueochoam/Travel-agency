@@ -9,12 +9,20 @@ class DestinationDataService{
     return http.get(`/destination?id=${id}`);
   }
 
+  getReservations(id) {
+    return http.get(`/reservations?name=${id}`);
+  }
+
   find(query, by = "name", page = 0) {
     return http.get(`destinations?${by}=${query}&page=${page}`);
   } 
 
   createReview(data) {
     return http.post("/review-new", data);
+  }
+
+  createReservation(data) {
+    return http.post("/reservation-new", data);
   }
 
   updateReview(data) {
